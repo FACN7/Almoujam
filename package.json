@@ -1,0 +1,25 @@
+{
+  "name": "Almoujam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN7/Almoujam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN7/Almoujam/issues"
+  },
+  "homepage": "https://github.com/FACN7/Almoujam#readme",
+  "devDependencies": {
+    "request": "^2.88.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  }
+}
