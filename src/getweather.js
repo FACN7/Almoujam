@@ -22,7 +22,7 @@ module.exports=(req,res)=>{
           if (error) throw new Error(error);
             
           res.writeHead(200, {'content-type': 'application/json'});
-          res.end(JSON.stringify(body));
+          res.end(body);
        
 
           console.log(body);

@@ -1,7 +1,12 @@
 function getTempCelsius(){
 document.getElementById("getTempCelsiusButton");
 console.log("entered the Celsious func");
-
+var city = document.getElementById("myInput1").value;
+var tempElement = document.getElementById("temp-emement");
+    fetch("/getweather?city="+city).then(response=> response.json()).then((data)=>{
+      tempElement.textContent = Math.floor(data.main.temp-273);
+      console.log(data);
+    }).catch((err)=>{});
 }
 function getTempF(){
   document.getElementById("getTempFButton");
