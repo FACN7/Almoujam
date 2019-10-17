@@ -70,8 +70,9 @@ body {
 .center {
 padding: 5rem;
 height: 700px;
+width: 400px;
 background: rgb(44, 209, 255);
-opacity: 0.9;
+opacity: 0.98;
 position: fixed;
 top: 50%;
 left: 50%;
@@ -86,7 +87,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 25px;
     /* font-family: Permanent Marker, sans-serif; */
     border: 0.5rem;
-    width: 12rem;
+    width: 7rem;
     height: 3rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
@@ -98,7 +99,8 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .temp{
-    font-size: 220px;
+    font-size: 90px; 
+    text-align: center;
   }
 
   .deg{
@@ -106,9 +108,13 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 75px;
   }
   .check{
-    border-radius: 100%;
+    border-radius: 25px;
+    background: black;
+  color: wheat;
+  margin-top: 0.9em;
+  opacity: 0.9;
     font-family: 'Merriweather', serif;
-    font-size: 2rem;
+    font-size: 3rem;
     /* background-color: Transparent;	 */
     border: none;
     cursor:pointer;
