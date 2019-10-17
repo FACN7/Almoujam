@@ -1,3 +1,15 @@
+function getTempCelsius(){
+document.getElementById("getTempCelsiusButton");
+console.log("entered the Celsious func");
+
+}
+function getTempF(){
+  document.getElementById("getTempFButton");
+  console.log("entered the Fehrenheit func");
+  
+  }
+
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
@@ -103,5 +115,5 @@ function autocomplete(inp, arr) {
 
 fetch("/getcountries").then(response=> response.json()).then(data1=>{
   console.log(data1);
-  autocomplete(document.getElementById("myInput"), data1);
+  autocomplete(document.getElementById("myInput1"), data1);
 }).catch(err=>{console.log(err)});
