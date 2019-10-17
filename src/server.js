@@ -5,7 +5,10 @@ const {cities} = require('./cities.js');
 const weatherIn = require('./getweather.js');
 const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 4000;
+
 const publicDirPath = path.join(path.resolve(__dirname),'../public');
+const urlModule = require('url');
+
 
 let notFoundHandler = (req,res)=>{
   // console.log(req)
@@ -57,9 +60,8 @@ let handlePublicTextFile = (filePath,contentTypeObj,req,res)=>{
 
 const handler = (req, res) => {
   const url = req.url;
-
   console.log('URL: ', url);
-
+  const endpoint = urlModule.parse(url, true).pathname;
   if (url === '/') {
     fs.readFile(path.join(__dirname, '../public/index.html'), 'utf8', (err, file) => {
       /* istanbul ignore if */
@@ -75,7 +77,7 @@ const handler = (req, res) => {
         res.writeHead(200, {'content-type': 'text/json'});
         res.end(cities);
 
-  } else if (url === '/getweather') {
+  } else if (endpoint === '/getweather') {
     weatherIn(req,res);
   } else if (url === '/css/stylesheet.css'||path.extname(url)=='.css') {
     handlePublicFile(url, {'content-type': 'text/css'},req,res)(req,res);
